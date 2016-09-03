@@ -70,9 +70,11 @@
                             android:layout_marginRight="18dp"
                             android:text="-"
                             android:textSize="20sp"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:onClick="decreaseBlackCoffeeAmount"/>
 
                         <TextView
+                            android:id="@+id/blackCoffeeAmountText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
@@ -85,7 +87,8 @@
                             android:layout_marginLeft="18dp"
                             android:text="+"
                             android:textSize="20sp"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:onClick="increaseBlackCoffeeAmount"/>
 
                     </LinearLayout>
 
@@ -137,9 +140,11 @@
                             android:layout_marginRight="18dp"
                             android:text="-"
                             android:textSize="20sp"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:onClick="decreaseIcedCoffeeAmount"/>
 
                         <TextView
+                            android:id="@+id/icedCoffeeAmountText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
@@ -152,7 +157,8 @@
                             android:layout_marginLeft="18dp"
                             android:text="+"
                             android:textSize="20sp"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:onClick="increaseIcedCoffeeAmount"/>
 
                     </LinearLayout>
 
@@ -171,11 +177,12 @@
                 android:textAllCaps="true"/>
 
             <TextView
+                android:id="@+id/priceText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="20dp"
                 android:text="$0.00"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textColor="@android:color/black"/>
 
             <Button
