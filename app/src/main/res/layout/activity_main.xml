@@ -3,81 +3,190 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.megawats.coffeepicker.MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quantity"
-            android:textAllCaps="true"
-            android:layout_marginBottom="16dp"/>
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginRight="10dp"
-                android:text="-"
-                android:onClick="decreaseOrderAmount"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/quantityText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
+                android:paddingTop="15dp"
+                android:text="Select a Drink"
+                android:textAllCaps="true"
+                android:textSize="30sp"
                 android:layout_marginBottom="16dp"/>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="15dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <ImageView
+                        android:src="@drawable/black_coffee_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/holo_green_light"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentLeft="true"
+                        android:paddingTop="2dp"
+                        android:text="Black Coffee"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"/>
+
+                    <LinearLayout
+                        android:id="@+id/blackCoffeeAmountBackground"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="#E0E0E0">
+
+                        <Button
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="18dp"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"/>
+
+                        <Button
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="18dp"
+                            android:text="+"
+                            android:textSize="20sp"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.005"
+                    android:background="@android:color/black"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <ImageView
+                        android:src="@drawable/iced_coffee_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/holo_blue_dark"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentLeft="true"
+                        android:paddingTop="2dp"
+                        android:text="Iced Coffee"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"/>
+
+                    <LinearLayout
+                        android:id="@+id/icedCoffeeAmountBackground"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="#E0E0E0">
+
+                        <Button
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="18dp"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"/>
+
+                        <Button
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="18dp"
+                            android:text="+"
+                            android:textSize="20sp"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="Price"
+                android:textSize="15sp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text="$0.00"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"/>
+
             <Button
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="10dp"
-                android:text="+"
-                android:onClick="increaseOrderAmount"/>
+                android:layout_width="160dp"
+                android:layout_height="85dp"
+                android:text="Order"
+                android:textSize="40sp"
+                android:textAllCaps="false"/>
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="Price"
-            android:textAllCaps="true"/>
-
-        <TextView
-            android:id="@+id/priceText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="$0.00"
-            android:textSize="16sp"
-            android:textColor="@android:color/black"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Order"
-            android:textAllCaps="true"
-            android:textColor="@android:color/black"
-            android:onClick="submitOrder"/>
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
