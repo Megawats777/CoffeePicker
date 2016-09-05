@@ -5,24 +5,11 @@
     android:layout_height="match_parent"
     tools:context="com.megawats.coffeepicker.MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:text="Select a Drink"
-                android:textAllCaps="true"
-                android:textSize="30sp"
-                android:layout_marginBottom="16dp"/>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -186,14 +173,13 @@
                 android:textColor="@android:color/black"/>
 
             <Button
-                android:layout_width="160dp"
+                android:layout_width="wrap_content"
                 android:layout_height="85dp"
-                android:text="Order"
+                android:text="Checkout"
                 android:textSize="40sp"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                android:onClick="goToCheckout"/>
 
         </LinearLayout>
-
-    </ScrollView>
 
 </RelativeLayout>
