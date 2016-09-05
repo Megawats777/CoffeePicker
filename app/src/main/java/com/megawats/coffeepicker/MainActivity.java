@@ -1,5 +1,6 @@
 package com.megawats.coffeepicker;
 
+import android.content.Intent;
 import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Set the title for the activity
+        setTitle("Order Items");
 
         // Get to the black coffee and iced coffee amount text objects
         blackCoffeeAmountText = (TextView) findViewById(R.id.blackCoffeeAmountText);
@@ -153,6 +157,17 @@ public class MainActivity extends AppCompatActivity {
     {
         String displayedPrice = Integer.toString(num);
         orderPriceText.setText("$" + displayedPrice + ".00");
+    }
+
+
+    // Go to checkout screen
+    public void goToCheckout(View view)
+    {
+        // Get the order summary activity
+        Intent intent = new Intent(this, OrderSummary.class);
+
+        // Open the activity
+        startActivity(intent);
     }
 
 }
