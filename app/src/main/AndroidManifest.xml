@@ -17,10 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OrderSummary"
-            android:screenOrientation="portrait">
-
-        </activity>
+        <activity
+            android:name=".OrderSummary"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".OrderComplete"></activity>
     </application>
 
 </manifest>
