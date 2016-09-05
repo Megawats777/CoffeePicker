@@ -20,7 +20,10 @@
         <activity
             android:name=".OrderSummary"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".OrderComplete"></activity>
+        <activity android:name=".OrderComplete"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>
