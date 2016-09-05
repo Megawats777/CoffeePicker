@@ -74,7 +74,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="-"/>
+                        android:text="-"
+                        android:onClick="decreaseBlackCoffeeOrderAmount"/>
 
                     <TextView
                         android:id="@+id/blackCoffeeOrderAmountText"
@@ -87,7 +88,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="+"/>
+                        android:text="+"
+                        android:onClick="increaseBlackCoffeeOrderAmount"/>
 
                 </LinearLayout>
 
@@ -152,7 +154,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="-"/>
+                        android:text="-"
+                        android:onClick="decreaseIcedCoffeeOrderAmount"/>
 
                     <TextView
                         android:id="@+id/icedCoffeeOrderAmountText"
@@ -165,7 +168,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="+"/>
+                        android:text="+"
+                        android:onClick="increaseIcedCoffeeOrderAmount"/>
 
                 </LinearLayout>
 
@@ -230,7 +234,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="-"/>
+                        android:text="-"
+                        android:onClick="decreaseWaterOrderAmount"/>
 
                     <TextView
                         android:id="@+id/waterOrderAmountText"
@@ -243,7 +248,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="+"/>
+                        android:text="+"
+                        android:onClick="increaseWaterOrderAmount"/>
 
                 </LinearLayout>
 
@@ -308,7 +314,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="-"/>
+                        android:text="-"
+                        android:onClick="decreaseOrangeJuiceOrderAmount"/>
 
                     <TextView
                         android:id="@+id/orangeJuiceOrderAmountText"
@@ -321,7 +328,8 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="+"/>
+                        android:text="+"
+                        android:onClick="increaseOrangeJuiceOrderAmount"/>
 
                 </LinearLayout>
 
@@ -346,7 +354,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:text="Checkout"/>
+            android:text="Checkout"
+            android:onClick="goToCheckout"/>
 
     </RelativeLayout>
 

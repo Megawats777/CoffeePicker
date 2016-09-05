@@ -21,6 +21,15 @@ public class OrderInfo
     public static int blackCoffeeOrderAmount = 0;
     public static int icedCoffeeOrderAmount = 0;
     public static int waterOrderAmount = 0;
-    public static int orangeJuiceOrderAmountPrice = 0;
+    public static int orangeJuiceOrderAmount = 0;
+
+    // Reset order amounts
+    public static void resetOrderAmounts()
+    {
+        blackCoffeeOrderAmount = 0;
+        icedCoffeeOrderAmount = 0;
+        waterOrderAmount = 0;
+        orangeJuiceOrderAmount = 0;
+    }
 }
 

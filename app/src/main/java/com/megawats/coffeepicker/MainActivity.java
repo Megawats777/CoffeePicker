@@ -44,5 +44,144 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the title for the activity
         setTitle("Order Items");
+
+        // Display the orderamounts
+        displayOrderAmounts(blackCoffeeOrderAmountText, OrderInfo.blackCoffeeOrderAmount);
+        displayOrderAmounts(icedCoffeeOrderAmountText, OrderInfo.icedCoffeeOrderAmount);
+        displayOrderAmounts(waterOrderAmountText, OrderInfo.waterOrderAmount);
+        displayOrderAmounts(orangeJuiceOrderAmountText, OrderInfo.orangeJuiceOrderAmount);
+    }
+
+    /*--Black Coffee Functions--*/
+
+    // Decrease the black coffee order amount
+    public void decreaseBlackCoffeeOrderAmount(View view)
+    {
+        // If the black coffee order amount is greater than 0 decrease the amount
+        if (OrderInfo.blackCoffeeOrderAmount > 0)
+        {
+            OrderInfo.blackCoffeeOrderAmount--;
+
+            // Update the blackCoffeeOrderAmountText
+            displayOrderAmounts(blackCoffeeOrderAmountText, OrderInfo.blackCoffeeOrderAmount);
+        }
+    }
+
+    // Increase the black coffee order amount
+    public void increaseBlackCoffeeOrderAmount(View view)
+    {
+        // If the order amount is less than 49
+        if (OrderInfo.blackCoffeeOrderAmount < 49)
+        {
+            OrderInfo.blackCoffeeOrderAmount++;
+
+            // Update the blackCoffeeOrderAmountText
+            displayOrderAmounts(blackCoffeeOrderAmountText, OrderInfo.blackCoffeeOrderAmount);
+        }
+    }
+
+    /*--Iced Coffee Functions--*/
+
+    // Decrease the iced coffee order amount
+    public void decreaseIcedCoffeeOrderAmount(View view)
+    {
+        // If the order amount is greater than 0 decrease the order amount
+        if (OrderInfo.icedCoffeeOrderAmount > 0)
+        {
+            OrderInfo.icedCoffeeOrderAmount--;
+
+            // Display the order amount
+            displayOrderAmounts(icedCoffeeOrderAmountText, OrderInfo.icedCoffeeOrderAmount);
+        }
+    }
+
+    // Increase the iced coffee order amount
+    public void increaseIcedCoffeeOrderAmount(View view)
+    {
+        // If the order amount is less than 49 increase the order amount
+        if (OrderInfo.icedCoffeeOrderAmount < 49)
+        {
+            OrderInfo.icedCoffeeOrderAmount++;
+
+            // Display the order amount
+            displayOrderAmounts(icedCoffeeOrderAmountText, OrderInfo.icedCoffeeOrderAmount);
+        }
+    }
+
+    /*--Water Functions--*/
+
+    // Decrease the water order amount
+    public void decreaseWaterOrderAmount(View view)
+    {
+        // If the order amount is greater than 0 decrease the order amount
+        if (OrderInfo.waterOrderAmount > 0)
+        {
+            OrderInfo.waterOrderAmount--;
+
+            // Display the order amount
+            displayOrderAmounts(waterOrderAmountText, OrderInfo.waterOrderAmount);
+        }
+    }
+
+    // Increase the water order amount
+    public void increaseWaterOrderAmount(View view)
+    {
+        // If the order amount is less than 49 increase the order amount
+        if (OrderInfo.waterOrderAmount < 49)
+        {
+            OrderInfo.waterOrderAmount++;
+
+            // Display the order amount
+            displayOrderAmounts(waterOrderAmountText, OrderInfo.waterOrderAmount);
+        }
+    }
+
+
+    /*--Orange Juice Functions--*/
+
+    // Decrease the orange juice order amount
+    public void decreaseOrangeJuiceOrderAmount(View view)
+    {
+        // If the order amount is greater than 0 decrease the order amount
+        if (OrderInfo.orangeJuiceOrderAmount > 0)
+        {
+            OrderInfo.orangeJuiceOrderAmount--;
+
+            // Display the order amount
+            displayOrderAmounts(orangeJuiceOrderAmountText, OrderInfo.orangeJuiceOrderAmount);
+        }
+    }
+
+    // Increase the orange juice order amount
+    public void increaseOrangeJuiceOrderAmount(View view)
+    {
+        // If the order amount is less than 49 increase the order amount
+        if (OrderInfo.orangeJuiceOrderAmount < 49)
+        {
+            OrderInfo.orangeJuiceOrderAmount++;
+
+            // Display the order amount
+            displayOrderAmounts(orangeJuiceOrderAmountText, OrderInfo.orangeJuiceOrderAmount);
+        }
+    }
+
+    // Display order amounts
+    private void displayOrderAmounts(TextView textView, int amount)
+    {
+        // Convert the amount to string
+        String displayedAmount = Integer.toString(amount);
+
+        // Display the amount
+        textView.setText(displayedAmount);
+    }
+
+    // Go to the checkout activity
+    public void goToCheckout(View view)
+    {
+        // Get the activity
+        Intent intent = new Intent(this, OrderSummary.class);
+
+        // Open the activity
+        startActivity(intent);
     }
 }
