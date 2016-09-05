@@ -15,10 +15,10 @@
             android:layout_height="match_parent"
             android:layout_marginTop="16dp">
 
-            <!--TESTING Card Code-->
+            <!--Black Coffee Card Code-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="200dp"
                 android:layout_marginBottom="5dp">
 
                 <ImageView
@@ -90,13 +90,245 @@
 
                 </LinearLayout>
 
+            </RelativeLayout>
+
+            <!--Iced Coffee Card Code-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/icedCoffeeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Iced Coffee"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/icedCoffeePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/icedCoffeeTitle"
+                    android:layout_marginLeft="20dp"
+                    android:text="$2.00/each"
+                    android:textSize="14sp"
+                    android:elevation="5dp"/>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/iced_coffee_01"
+                    android:elevation="5dp"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_below="@+id/icedCoffeePrice"
+                    android:elevation="5dp">
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@android:color/black"/>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="+"/>
+
+                </LinearLayout>
 
             </RelativeLayout>
+
+            <!--Water Card Code-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/waterTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Water"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/waterPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/waterTitle"
+                    android:layout_marginLeft="20dp"
+                    android:text="$1.00/each"
+                    android:textSize="14sp"
+                    android:elevation="5dp"/>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/water_01"
+                    android:elevation="5dp"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_below="@+id/waterPrice"
+                    android:elevation="5dp">
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@android:color/black"/>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="+"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--Orange Juice Code-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/orangeJuiceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Orange Juice"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/orangeJuicePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orangeJuiceTitle"
+                    android:layout_marginLeft="20dp"
+                    android:text="$2.00/each"
+                    android:textSize="14sp"
+                    android:elevation="5dp"/>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/orange_juice_01"
+                    android:elevation="5dp"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_below="@+id/orangeJuicePrice"
+                    android:elevation="5dp">
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@android:color/black"/>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="+"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
 
         </LinearLayout>
 
     </ScrollView>
 
+    <!--Checkout Bar Code-->
     <RelativeLayout
         android:id="@+id/checkoutButtonBackground"
         android:layout_width="match_parent"
@@ -111,7 +343,6 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:text="Checkout"/>
-
 
     </RelativeLayout>
 
