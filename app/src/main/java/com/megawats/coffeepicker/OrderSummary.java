@@ -1,5 +1,7 @@
 package com.megawats.coffeepicker;
 
+import android.content.Intent;
+import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,9 +20,13 @@ public class OrderSummary extends AppCompatActivity {
     }
 
     // Go to the order complete activity
-    public void goToOrderCompleteActivity(View view)
+    public void openOrderCompleteActivity(View view)
     {
+        // Get the activity
+        Intent intent = new Intent(this, OrderComplete.class);
 
+        // Open the activity
+        startActivity(intent);
     }
 
 }

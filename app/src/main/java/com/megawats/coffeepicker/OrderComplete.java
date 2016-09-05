@@ -1,7 +1,9 @@
 package com.megawats.coffeepicker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 // The order complete activity
 public class OrderComplete extends AppCompatActivity {
@@ -13,5 +15,16 @@ public class OrderComplete extends AppCompatActivity {
         setContentView(R.layout.activity_order_complete);
 
         // Set the title for the activity
+        setTitle("Order Complete");
+    }
+
+    // Open the home screen
+    public void openHomeScreen(View view)
+    {
+        // Get the Order items activity
+        Intent intent = new Intent(this, MainActivity.class);
+
+        // Open the activity
+        startActivity(intent);
     }
 }
