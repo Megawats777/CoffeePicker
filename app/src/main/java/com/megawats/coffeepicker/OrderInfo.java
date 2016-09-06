@@ -32,6 +32,20 @@ public class OrderInfo
     /*--The limit on the amount of orders per item*/
     public static int ordersPerItemLimit = 5;
 
+    // Calculate prices
+    public static void calculatePrices()
+    {
+        // Calculate the total prices per item
+        totalBlackCoffeePrice = blackCoffeeOrderAmount * blackCoffeePrice;
+        totalIcedCoffeePrice = icedCoffeeOrderAmount * icedCoffeePrice;
+        totalWaterPrice = waterOrderAmount * waterPrice;
+        totalOrangeJuicePrice = orangeJuiceOrderAmount * orangeJuicePrice;
+
+        // Calculate the total order price
+        totalOrderPrice = totalBlackCoffeePrice + totalIcedCoffeePrice + totalWaterPrice + totalOrangeJuicePrice;
+    }
+
+
     // Reset order amounts
     public static void resetOrderAmounts()
     {

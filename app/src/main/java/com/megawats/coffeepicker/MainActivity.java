@@ -178,10 +178,14 @@ public class MainActivity extends AppCompatActivity {
     // Go to the checkout activity
     public void goToCheckout(View view)
     {
+        // Calculate the total prices
+        OrderInfo.calculatePrices();
+
         // Get the activity
         Intent intent = new Intent(this, OrderSummary.class);
 
         // Open the activity
         startActivity(intent);
+
     }
 }
