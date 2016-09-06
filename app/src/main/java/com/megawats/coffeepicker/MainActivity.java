@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
     // Increase the black coffee order amount
     public void increaseBlackCoffeeOrderAmount(View view)
     {
-        // If the order amount is less than 49
-        if (OrderInfo.blackCoffeeOrderAmount < 49)
+        // If the order amount is less than the order item limit
+        if (OrderInfo.blackCoffeeOrderAmount < OrderInfo.ordersPerItemLimit)
         {
             OrderInfo.blackCoffeeOrderAmount++;
 
@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
     // Increase the iced coffee order amount
     public void increaseIcedCoffeeOrderAmount(View view)
     {
-        // If the order amount is less than 49 increase the order amount
-        if (OrderInfo.icedCoffeeOrderAmount < 49)
+        // If the order amount is less than the order item limit increase the order amount
+        if (OrderInfo.icedCoffeeOrderAmount < OrderInfo.ordersPerItemLimit)
         {
             OrderInfo.icedCoffeeOrderAmount++;
 
@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
     // Increase the water order amount
     public void increaseWaterOrderAmount(View view)
     {
-        // If the order amount is less than 49 increase the order amount
-        if (OrderInfo.waterOrderAmount < 49)
+        // If the order amount is less than the order item limit increase the order amount
+        if (OrderInfo.waterOrderAmount < OrderInfo.ordersPerItemLimit)
         {
             OrderInfo.waterOrderAmount++;
 
@@ -155,8 +155,8 @@ public class MainActivity extends AppCompatActivity {
     // Increase the orange juice order amount
     public void increaseOrangeJuiceOrderAmount(View view)
     {
-        // If the order amount is less than 49 increase the order amount
-        if (OrderInfo.orangeJuiceOrderAmount < 49)
+        // If the order amount is less than the order item limit increase the order amount
+        if (OrderInfo.orangeJuiceOrderAmount < OrderInfo.ordersPerItemLimit)
         {
             OrderInfo.orangeJuiceOrderAmount++;
 

@@ -10,6 +10,12 @@ public class OrderInfo
     /*--The total order price--*/
     public static int totalOrderPrice;
 
+    /*--The total price per item order--*/
+    public static int totalBlackCoffeePrice = 0;
+    public static int totalIcedCoffeePrice = 0;
+    public static int totalWaterPrice = 0;
+    public static int totalOrangeJuicePrice;
+
     /*--The Price of the items--*/
     public static int blackCoffeePrice = 5;
     public static int icedCoffeePrice = 2;
@@ -22,6 +28,9 @@ public class OrderInfo
     public static int icedCoffeeOrderAmount = 0;
     public static int waterOrderAmount = 0;
     public static int orangeJuiceOrderAmount = 0;
+
+    /*--The limit on the amount of orders per item*/
+    public static int ordersPerItemLimit = 5;
 
     // Reset order amounts
     public static void resetOrderAmounts()
