@@ -18,15 +18,4 @@ public class OrderSummary extends AppCompatActivity {
         // Set the title for the activity
         setTitle("Order Summary");
     }
-
-    // Go to the order complete activity
-    public void openOrderCompleteActivity(View view)
-    {
-        // Get the activity
-        Intent intent = new Intent(this, OrderComplete.class);
-
-        // Open the activity
-        startActivity(intent);
-    }
-
 }
