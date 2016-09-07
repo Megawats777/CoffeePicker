@@ -229,7 +229,7 @@
                 android:id="@+id/deliveryTimeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10 Minutes"
+                android:text="10 Seconds"
                 android:textSize="16sp"/>
 
         </LinearLayout>

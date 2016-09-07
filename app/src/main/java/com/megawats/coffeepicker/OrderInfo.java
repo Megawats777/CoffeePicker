@@ -1,5 +1,7 @@
 package com.megawats.coffeepicker;
 
+import android.util.Log;
+
 /**
  * Created by jedse on 2016-09-05.
  */
@@ -32,6 +34,9 @@ public class OrderInfo
     /*--The limit on the amount of orders per item*/
     public static int ordersPerItemLimit = 5;
 
+    /*--The delivery time for the order--*/
+    public static int deliveryTime = 0;
+
     // Calculate prices
     public static void calculatePrices()
     {
@@ -45,6 +50,11 @@ public class OrderInfo
         totalOrderPrice = totalBlackCoffeePrice + totalIcedCoffeePrice + totalWaterPrice + totalOrangeJuicePrice;
     }
 
+    // Calculate total order amount
+    public static void calculateTotalOrderAmount()
+    {
+        totalOrderAmount = blackCoffeeOrderAmount + icedCoffeeOrderAmount + waterOrderAmount + orangeJuiceOrderAmount;
+    }
 
     // Reset order amounts
     public static void resetOrderAmounts()
@@ -53,6 +63,13 @@ public class OrderInfo
         icedCoffeeOrderAmount = 0;
         waterOrderAmount = 0;
         orangeJuiceOrderAmount = 0;
+    }
+
+    // Calculate the total delivery time
+    public static void calculateTotalDeliveryTime()
+    {
+        // Set the delivery time the same as the total order amount
+       deliveryTime = totalOrderAmount;
     }
 }
 

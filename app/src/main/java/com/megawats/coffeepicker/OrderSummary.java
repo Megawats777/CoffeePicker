@@ -73,6 +73,9 @@ public class OrderSummary extends AppCompatActivity {
         // Display total item price
         displayTotalItemPrice();
 
+        // Display the delivery time
+        displayDeliveryTime();
+
         // Set the title for the activity
         setTitle("Order Summary");
     }
@@ -113,5 +116,34 @@ public class OrderSummary extends AppCompatActivity {
         icedCoffeeTotalPriceText.setText("$" + icedCoffeeOrderPriceStr+ ".00");
         waterTotalPriceText.setText("$" + waterOrderPriceStr + ".00");
         orangeJuicePriceText.setText("$" + orangeJuiceOrderPriceStr + ".00");
+    }
+
+    // Display the delivery time
+    private void displayDeliveryTime()
+    {
+        // The string version of the delivery time
+        String deliveryTimeStr = Integer.toString(OrderInfo.deliveryTime);
+
+        // If the total order amount is greater than 1 show the delivery time
+        if (OrderInfo.totalOrderAmount > 1)
+        {
+            // Set the value of the delivery time text
+            deliveryTimeText.setText(deliveryTimeStr + " Seconds");
+
+        }
+
+        // Show the delivery time with "Second" if the total order amount is 1
+        else if (OrderInfo.totalOrderAmount == 1)
+        {
+            // Set the value of the delivery time text
+            deliveryTimeText.setText(deliveryTimeStr + " Second");
+        }
+
+        // If the total order amount is 0 show a warning message
+        else if (OrderInfo.totalOrderAmount == 0)
+        {
+            // Set the value of the delivery time text
+            deliveryTimeText.setText("NO ORDERED ITEMS");
+        }
     }
 }

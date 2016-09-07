@@ -181,6 +181,12 @@ public class MainActivity extends AppCompatActivity {
         // Calculate the total prices
         OrderInfo.calculatePrices();
 
+        // Calculate the total order amount
+        OrderInfo.calculateTotalOrderAmount();
+
+        // Calulate the delivery time for the order
+        OrderInfo.calculateTotalDeliveryTime();
+
         // Get the activity
         Intent intent = new Intent(this, OrderSummary.class);
 
