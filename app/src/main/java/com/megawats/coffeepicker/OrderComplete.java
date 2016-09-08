@@ -16,21 +16,37 @@ public class OrderComplete extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_complete);
 
+        // Store this activity
+        ActivityManager.orderComplete = this;
+
         // Set the title for the activity
         setTitle("Order Complete");
+    }
+
+    // When the user presses back
+    @Override
+    public void onBackPressed()
+    {
 
     }
 
     // Open the home screen
     public void openHomeScreen(View view)
     {
+        // Mark that the user has not finished selecting items and has not accepted the order
+        OrderInfo.hasFinishedSelectingItems = false;
+        OrderInfo.hasAcceptedOrder = false;
+
+        // Close the main activity
+        ActivityManager.mainActivity.finish();
+
+        // Close the order summary activity
+        ActivityManager.orderSummary.finish();
+
         // Get the Order items activity
         Intent intent = new Intent(this, MainActivity.class);
 
         // Open the activity
         startActivity(intent);
-
-        // Destroy this activity
-        finish();
     }
 }

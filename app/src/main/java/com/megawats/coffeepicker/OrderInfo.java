@@ -39,6 +39,12 @@ public class OrderInfo
     /*--The delivery time for the order--*/
     public static int deliveryTime = 0;
 
+    /*--Has the user finished selecting items--*/
+    public static boolean hasFinishedSelectingItems = false;
+
+    /*--Has the user accepted the order--*/
+    public static boolean hasAcceptedOrder = false;
+
     // Calculate prices
     public static void calculatePrices()
     {

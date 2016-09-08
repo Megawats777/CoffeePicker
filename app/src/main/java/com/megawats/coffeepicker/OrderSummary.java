@@ -43,6 +43,9 @@ public class OrderSummary extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_summary);
 
+        // Store this activity
+        ActivityManager.orderSummary = this;
+
         // Get the item display groups
         blackCoffeeDisplayGroup = (LinearLayout) findViewById(R.id.blackCoffeeGroup);
         icedCoffeeDisplayGroup = (LinearLayout) findViewById(R.id.icedCoffeeGroup);
@@ -150,13 +153,20 @@ public class OrderSummary extends AppCompatActivity {
     // Open the order complete activity
     public void openOrderComplete(View view)
     {
+        // Mark that the user has accepted the order
+        OrderInfo.hasAcceptedOrder = true;
+
         // Get the activity
         Intent intent = new Intent(this, OrderComplete.class);
 
         // Open the activity
         startActivity(intent);
+    }
 
-        // Destroy this activity
-        finish();
+    // When the user presses back
+    @Override
+    public void onBackPressed()
+    {
+        OrderInfo.hasFinishedSelectingItems = false;
     }
 }

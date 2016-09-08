@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Store this activity
+        ActivityManager.mainActivity = this;
+
         // Get the background of the checkout button
         checkoutButtonBackground  = (RelativeLayout) findViewById(R.id.checkoutButtonBackground);
 
@@ -50,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         displayOrderAmounts(icedCoffeeOrderAmountText, OrderInfo.icedCoffeeOrderAmount);
         displayOrderAmounts(waterOrderAmountText, OrderInfo.waterOrderAmount);
         displayOrderAmounts(orangeJuiceOrderAmountText, OrderInfo.orangeJuiceOrderAmount);
+
+        // Open other activities based on the status of the user's order
+        openForwardActivities();
     }
 
     /*--Black Coffee Functions--*/
@@ -187,11 +193,33 @@ public class MainActivity extends AppCompatActivity {
         // Calulate the delivery time for the order
         OrderInfo.calculateTotalDeliveryTime();
 
+        // Mark that the user has finished selecting an order
+        OrderInfo.hasFinishedSelectingItems = true;
+
         // Get the activity
         Intent intent = new Intent(this, OrderSummary.class);
 
         // Open the activity
         startActivity(intent);
+    }
 
+    // Open other activities based on the status of the user's order
+    private void openForwardActivities()
+    {
+        // If the user has selected items and has accepted the order open the order complete screen
+        if (OrderInfo.hasFinishedSelectingItems == true && OrderInfo.hasAcceptedOrder == true)
+        {
+            // Go to the order complete activity
+            Intent intent = new Intent(this, OrderComplete.class);
+            startActivity(intent);
+        }
+
+        // If the user has not accepted the order open the order summary screen
+        if (OrderInfo.hasFinishedSelectingItems == true && OrderInfo.hasAcceptedOrder == false)
+        {
+            // Go to the order summary activity
+            Intent intent = new Intent(this, OrderSummary.class);
+            startActivity(intent);
+        }
     }
 }
