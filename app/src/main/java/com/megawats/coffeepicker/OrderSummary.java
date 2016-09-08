@@ -146,4 +146,17 @@ public class OrderSummary extends AppCompatActivity {
             deliveryTimeText.setText("NO ORDERED ITEMS");
         }
     }
+
+    // Open the order complete activity
+    public void openOrderComplete(View view)
+    {
+        // Get the activity
+        Intent intent = new Intent(this, OrderComplete.class);
+
+        // Open the activity
+        startActivity(intent);
+
+        // Destroy this activity
+        finish();
+    }
 }

@@ -1,6 +1,8 @@
 package com.megawats.coffeepicker;
 
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,7 @@ public class OrderComplete extends AppCompatActivity {
 
         // Set the title for the activity
         setTitle("Order Complete");
+
     }
 
     // Open the home screen
@@ -26,5 +29,8 @@ public class OrderComplete extends AppCompatActivity {
 
         // Open the activity
         startActivity(intent);
+
+        // Destroy this activity
+        finish();
     }
 }
