@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         // Store this activity
         ActivityManager.mainActivity = this;
 
+        // If the order complete activity exists close it
+        if (ActivityManager.orderComplete != null)
+        {
+            ActivityManager.orderComplete.finish();
+        }
+
         // Get the background of the checkout button
         checkoutButtonBackground  = (RelativeLayout) findViewById(R.id.checkoutButtonBackground);
 
@@ -198,25 +204,5 @@ public class MainActivity extends AppCompatActivity {
 
         // Open the activity
         startActivity(intent);
-    }
-
-    // Open other activities based on the status of the user's order
-    private void openForwardActivities()
-    {
-        // If the user has selected items and has accepted the order open the order complete screen
-        if (OrderInfo.hasFinishedSelectingItems == true && OrderInfo.hasAcceptedOrder == true)
-        {
-            // Go to the order complete activity
-            Intent intent = new Intent(this, OrderComplete.class);
-            startActivity(intent);
-        }
-
-        // If the user has not accepted the order open the order summary screen
-        if (OrderInfo.hasFinishedSelectingItems == true && OrderInfo.hasAcceptedOrder == false)
-        {
-            // Go to the order summary activity
-            Intent intent = new Intent(this, OrderSummary.class);
-            startActivity(intent);
-        }
     }
 }
