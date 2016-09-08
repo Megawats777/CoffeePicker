@@ -162,11 +162,4 @@ public class OrderSummary extends AppCompatActivity {
         // Open the activity
         startActivity(intent);
     }
-
-    // When the user presses back
-    @Override
-    public void onBackPressed()
-    {
-        OrderInfo.hasFinishedSelectingItems = false;
-    }
 }

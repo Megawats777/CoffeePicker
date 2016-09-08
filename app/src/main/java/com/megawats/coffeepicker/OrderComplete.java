@@ -37,6 +37,9 @@ public class OrderComplete extends AppCompatActivity {
         OrderInfo.hasFinishedSelectingItems = false;
         OrderInfo.hasAcceptedOrder = false;
 
+        // Reset the order amounts
+        OrderInfo.resetOrderAmounts();
+
         // Close the main activity
         ActivityManager.mainActivity.finish();
 

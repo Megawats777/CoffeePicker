@@ -53,9 +53,6 @@ public class MainActivity extends AppCompatActivity {
         displayOrderAmounts(icedCoffeeOrderAmountText, OrderInfo.icedCoffeeOrderAmount);
         displayOrderAmounts(waterOrderAmountText, OrderInfo.waterOrderAmount);
         displayOrderAmounts(orangeJuiceOrderAmountText, OrderInfo.orangeJuiceOrderAmount);
-
-        // Open other activities based on the status of the user's order
-        openForwardActivities();
     }
 
     /*--Black Coffee Functions--*/
