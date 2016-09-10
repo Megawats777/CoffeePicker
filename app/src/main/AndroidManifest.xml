@@ -33,7 +33,6 @@
         <activity android:name=".SplashScreen"
                   android:screenOrientation="portrait"
                   android:noHistory="true">
-
         </activity>
 
     </application>
