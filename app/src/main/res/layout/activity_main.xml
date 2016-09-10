@@ -13,7 +13,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp">
+            android:paddingTop="16dp"
+            android:paddingBottom="20dp">
 
             <!--Black Coffee Card Code-->
             <RelativeLayout
@@ -27,7 +28,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@android:color/white"
-                    android:elevation="5dp"/>
+                    android:elevation="2dp"/>
 
                 <TextView
                     android:id="@+id/blackCoffeeTitle"
@@ -107,7 +108,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@android:color/white"
-                    android:elevation="5dp"/>
+                    android:elevation="2dp"/>
 
                 <TextView
                     android:id="@+id/icedCoffeeTitle"
@@ -187,7 +188,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@android:color/white"
-                    android:elevation="5dp"/>
+                    android:elevation="2dp"/>
 
                 <TextView
                     android:id="@+id/waterTitle"
@@ -267,7 +268,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@android:color/white"
-                    android:elevation="5dp"/>
+                    android:elevation="2dp"/>
 
                 <TextView
                     android:id="@+id/orangeJuiceTitle"
@@ -335,7 +336,6 @@
 
             </RelativeLayout>
 
-
         </LinearLayout>
 
     </ScrollView>
@@ -346,6 +346,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
+        android:clickable="true"
         android:background="@android:color/darker_gray">
 
         <Button
