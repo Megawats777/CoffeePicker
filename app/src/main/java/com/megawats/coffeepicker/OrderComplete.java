@@ -6,9 +6,16 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 // The order complete activity
 public class OrderComplete extends AppCompatActivity {
+
+    /*--The delivery time text--*/
+    private TextView deliveryTimeText;
+
+    /*--The order number text--*/
+    private TextView orderNumberText;
 
     // Create the activity
     @Override
@@ -21,13 +28,45 @@ public class OrderComplete extends AppCompatActivity {
 
         // Set the title for the activity
         setTitle("Order Complete");
+
+        // Get the delivery time text
+        deliveryTimeText = (TextView) findViewById(R.id.orderCompleteDeliveryTimeText);
+
+        // Get the order number text
+        orderNumberText = (TextView) findViewById(R.id.orderNumberText);
+
+        // Display the delivery time
+        displayDeliveryTime();
+
+        // Display the order number
+        displayOrderNumber();
     }
 
     // When the user presses back
     @Override
     public void onBackPressed()
     {
+        // Do nothing
+    }
 
+    // Display the delivery time
+    private void displayDeliveryTime()
+    {
+        // The string version of the delivery time
+        String deliveryTimeStr = Integer.toString(OrderInfo.deliveryTime);
+
+        // Set the value of the delivery time text
+        deliveryTimeText.setText(deliveryTimeStr + " Seconds");
+    }
+
+    // Display the order number
+    private void displayOrderNumber()
+    {
+        // The string version of the order number
+        String orderNumberStr = Integer.toString(OrderInfo.orderNumber);
+
+        // Set the value of the order number text
+        orderNumberText.setText(orderNumberStr);
     }
 
     // Open the home screen

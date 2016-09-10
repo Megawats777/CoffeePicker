@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import java.util.Random;
+
 /**
  * Created by jedse on 2016-09-05.
  */
@@ -38,6 +40,9 @@ public class OrderInfo
 
     /*--The delivery time for the order--*/
     public static int deliveryTime = 0;
+
+    /*--The user's order number--*/
+    public static int orderNumber = 0;
 
     /*--Has the user finished selecting items--*/
     public static boolean hasFinishedSelectingItems = false;
@@ -78,6 +83,16 @@ public class OrderInfo
     {
         // Set the delivery time the same as the total order amount
        deliveryTime = totalOrderAmount;
+    }
+
+    // Generate order number
+    public static void generateOrderNumber()
+    {
+        // The randomizer object
+        Random rngGenerator = new Random();
+
+        // Generate a random order number between 1 and 100
+        orderNumber = 0 + rngGenerator.nextInt(100);
     }
 }
 

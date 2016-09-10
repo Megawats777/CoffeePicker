@@ -156,6 +156,9 @@ public class OrderSummary extends AppCompatActivity {
         // Mark that the user has accepted the order
         OrderInfo.hasAcceptedOrder = true;
 
+        // Generate a random order number
+        OrderInfo.generateOrderNumber();
+
         // Get the activity
         Intent intent = new Intent(this, OrderComplete.class);
 
