@@ -6,51 +6,36 @@
     tools:context="com.megawats.coffeepicker.OrderComplete">
 
     <LinearLayout
-        android:id="@+id/appMessages"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:text="Thank you for your purchase!"
-            android:textSize="20sp"/>
-
+            android:text="Thank you for your purchase"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:text="Your order will arrive in 10 minutes"
-            android:textSize="20sp"/>
-
+            android:text="Delivery Time"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="25dp"
-            android:text="Jason will deliver your order"
-            android:textSize="20sp"/>
+            android:text="5 Seconds"/>
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/holo_blue_dark"
-            android:elevation="10dp"/>
-
-        <Button
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
-            android:text="Return to Home Screen"
-            android:onClick="openHomeScreen"/>
+            android:layout_height="wrap_content"
+            android:text="Order Number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"/>
 
     </LinearLayout>
+
 
 </RelativeLayout>
