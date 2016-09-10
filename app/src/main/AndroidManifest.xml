@@ -10,8 +10,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="standard">
+            android:launchMode="standard"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,15 +21,21 @@
 
         <activity
             android:name=".OrderSummary"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
-
-        <activity android:name=".OrderComplete"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".OrderComplete"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".SplashScreen"
+                  android:screenOrientation="portrait"
+                  android:noHistory="true">
 
         </activity>
+
     </application>
 
 </manifest>
