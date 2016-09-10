@@ -1,13 +1,16 @@
 package com.megawats.coffeepicker;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -196,13 +199,39 @@ public class MainActivity extends AppCompatActivity {
         // Calulate the delivery time for the order
         OrderInfo.calculateTotalDeliveryTime();
 
-        // Mark that the user has finished selecting an order
-        OrderInfo.hasFinishedSelectingItems = true;
+        // If the total order amount is greater than 0
+        if (OrderInfo.totalOrderAmount > 0)
+        {
+            // Mark that the user has finished selecting an order
+            OrderInfo.hasFinishedSelectingItems = true;
 
-        // Get the activity
-        Intent intent = new Intent(this, OrderSummary.class);
+            // Get the activity
+            Intent intent = new Intent(this, OrderSummary.class);
 
-        // Open the activity
-        startActivity(intent);
+            // Open the activity
+            startActivity(intent);
+        }
+
+        // If the total order amount is 0 then show a toast message
+        else if (OrderInfo.totalOrderAmount == 0)
+        {
+            // Get the application context
+            Context appContext = getApplicationContext();
+
+            // The message for the toast message
+            String toastMessage = "No Items Were Selected";
+
+            // The duration of the toast message
+            int toastMessageDuration = Toast.LENGTH_SHORT;
+
+            // Create the toast message
+            Toast toast = Toast.makeText(appContext, toastMessage, toastMessageDuration);
+
+            // Set the position of the toast message
+            toast.setGravity(Gravity.BOTTOM,0, 220);
+
+            // Show the toast message
+            toast.show();
+        }
     }
 }
